@@ -8,7 +8,7 @@ const core = require('@actions/core');
 
 const { createProbot } = require('probot');
 
-const adapt = require('./index');
+const adapt = require('./lib/index').default;
 
 describe('probot-actions-adapter', () => {
   let probot;

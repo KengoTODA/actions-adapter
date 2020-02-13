@@ -2,10 +2,12 @@
   "name": "probot-actions-adapter",
   "version": "1.0.2",
   "description": "An adapter that takes a Probot app and makes it compatible with GitHub Actions",
-  "main": "index.js",
-  "types": "index.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "test": "jest",
+    "prepack": "tsc",
+    "pretest": "tsc",
     "lint": "eslint *.js"
   },
   "keywords": [],
@@ -16,13 +18,15 @@
     "url": "git+https://github.com/probot/actions-adapter.git"
   },
   "devDependencies": {
+    "@types/uuid": "^3.4.7",
     "eslint": "^6.5.1",
-    "eslint-plugin-import": "^2.18.2",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-prettier": "^3.1.1",
     "jest": "^24.9.0",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "typescript": "^3.7.5"
   },
   "engines": {
     "node": ">= 8.3.0"
